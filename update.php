@@ -9,10 +9,17 @@ $sql = "SELECT `name`, `email`, `mobile` FROM crud WHERE id=$id";
 $query= mysqli_query($conn,$sql);
 
 $row=mysqli_fetch_assoc($query);
-print_r('<pre>');
-print_r($row);
-print_r('</pre>');
+	// print_r('<pre>');
+	// print_r($row);
+	// print_r('</pre>');
 
+if ($row) {
+	print_r('<pre>');
+	print_r($row['mobile']);
+	print_r('</pre>');
+}else{
+	echo "error";
+}
 
  ?>
 <!DOCTYPE html>

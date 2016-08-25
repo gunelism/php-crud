@@ -10,8 +10,8 @@ if(isset($_POST['submit'])){
 	
 	$sql4= "UPDATE crud SET name='$ad', email='$email', mobile='$mobile' WHERE id='$id'";
 	print_r('<pre>');
-print_r($sql4);
-print_r('</pre>');
+	print_r($sql4);
+	 print_r('</pre>');
 	$query4=mysqli_query($conn,$sql4);
 
 if ($query4){
