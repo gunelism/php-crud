@@ -1,7 +1,9 @@
 <?php 
 include 'config.php';
 	$id = $_GET['id'];
-
+	if (!isset($id)) {
+		header('Location:show.php');
+}
 	$sql5 = "SELECT  `name`, `email`, `mobile` FROM `crud` WHERE id='$id'";
 	$query5=mysqli_query($conn,$sql5);
 	$row=mysqli_fetch_assoc($query5);

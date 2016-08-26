@@ -4,6 +4,9 @@ $id = $_GET['id'];
 // $email = $_POST['email'];
 // $mobile = $_POST['mobile'];
 
+if (!isset($id)) {
+		header('Location:show.php');
+}
 
 $sql = "SELECT `name`, `email`, `mobile` FROM crud WHERE id=$id";
 $query= mysqli_query($conn,$sql);
